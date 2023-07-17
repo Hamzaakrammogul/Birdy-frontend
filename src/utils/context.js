@@ -1,9 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
 
 export const Context = createContext();
 
 const AppContext = (props) => {
-    return(
+    return (
         <Context.Provider>
             {props.children}
         </Context.Provider>

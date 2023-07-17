@@ -7,11 +7,13 @@
     color: white;
     border-bottom: 1px solid rgb(0, 0, 0, 0.1);
     z-index: 99;
-    @include md{
+
+    @include md {
         padding: 0 40px 0 40px;
     }
-    @include sm{
-    }
+
+    @include sm {}
+
     .header-content {
         display: flex;
         justify-content: space-between;
@@ -19,7 +21,8 @@
         height: 50px;
         max-width: 1200px;
         margin: 0 auto;
-        @include md{
+
+        @include md {
             height: 80px;
         }
 
@@ -27,7 +30,8 @@
             list-style-type: none;
             display: none;
             gap: 25px;
-            @include md{
+
+            @include md {
                 display: flex;
             }
 
@@ -43,6 +47,7 @@
             font-size: 22px;
             font-weight: 700;
             cursor: pointer;
+
             @include md {
                 font-size: 34px;
                 position: absolute;
@@ -56,6 +61,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
+
             @include md {
                 gap: 25px;
 
@@ -64,6 +70,7 @@
             svg {
                 font-size: 20px;
                 cursor: pointer;
+
                 @include md {
                     font-size: 24px;
                 }
@@ -89,7 +96,7 @@
         }
     }
 
-    &.sticky-header{
+    &.sticky-header {
         position: sticky;
         top: 0px;
         animation: stickyHeader 0.3s ease forwards;
@@ -100,6 +107,11 @@
 
 @keyframes stickyHeader {
 
-    0% {transform: translateY(-80px);}
-    100% {transform: translateY(0);}
+    0% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
