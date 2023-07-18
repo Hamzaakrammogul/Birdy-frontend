@@ -19,10 +19,11 @@
         margin: 0 auto;
         position: relative;
 
-        @include md{
+        @include md {
             flex-direction: row;
             max-width: 1200px;
         }
+
         .banner-img {
             position: relative;
             z-index: 9;
@@ -72,7 +73,8 @@
                 @include md {
                     font-size: 120px;
                 }
-                @include xxl{
+
+                @include xxl {
                     font-size: 180px;
                 }
             }
