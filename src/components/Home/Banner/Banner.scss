@@ -3,7 +3,7 @@
 .hero-banner {
     padding: 0 40px 0 40px;
     position: relative;
-    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    background-image: linear-gradient(to right, #a9ddeb, #56c6e2);
 
     @include md {
         height: calc(100vh - 80px);
@@ -46,7 +46,7 @@
         }
 
         .text-content {
-            color: white;
+            color: linear-gradient(to right, #a9ddeb, #56c6e2);
             text-align: center;
             display: flex;
             flex-direction: column;
