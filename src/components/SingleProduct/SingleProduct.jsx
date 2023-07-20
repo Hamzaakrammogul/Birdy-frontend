@@ -14,7 +14,7 @@ const SingleProduct = () => {
     return (
         <div className="single-product-main-content">
             <div className="layout">
-                <div className="singal-product-page">
+                <div className="single-product-page">
                     <div className="left">
                         <img src={prod} alt="" />
                     </div>
@@ -30,7 +30,7 @@ const SingleProduct = () => {
                             </div>
                             <button className="add-to-cart-btn">
                                 <FaCartPlus size={20} />
-                                ADD TO CART
+                                <p> ADD TO CART</p>
                             </button>
                         </div>
                         <span className="divider" />
@@ -40,7 +40,7 @@ const SingleProduct = () => {
                                 <span>Headphones</span>
                             </span>
                             <span className="text-bold" >
-                                Share
+                                Share:
                                 <span className="social-icons">
                                     <FaFacebookF size={16} />
                                     <FaTwitter size={16} />
@@ -52,6 +52,7 @@ const SingleProduct = () => {
                         </div>
                     </div>
                 </div>
+                <RelatedProducts />
             </div>
         </div>
     )
