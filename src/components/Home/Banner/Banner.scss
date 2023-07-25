@@ -27,18 +27,19 @@
         .banner-img {
             position: relative;
             z-index: 9;
-            width: 200px;
+            width: 400px;
             margin-bottom: 20px;
+            margin-right: 100px;
 
             @include md {
-                width: 450px;
+                width: 600px;
                 margin-right: 60px;
                 margin-top: 10px;
                 margin-bottom: 0px;
             }
 
             @include xxl {
-                width: 600px;
+                width: 800px;
                 margin-right: 0px;
                 margin-top: 0px;
             }

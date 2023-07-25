@@ -16,21 +16,13 @@ const Header = () => {
 
     const [scroll, setScroll] = useState(false);
     const [showCart, setShowCart] = useState(false);
-
-    const showCartHandler = () => {
-
-        if(showCart === false){
-            setShowCart(true);
-        }else{
-            setShowCart(false);
-        }
-    }
+    const [showSearch, setShowSearch] = useState(false);
 
 
     const handleScroll = () => {
         const offset = window.scrollY;
         console.log(offset)
-        if (offset > 200) {
+        if (offset > 100) {
             setScroll(true);
         } else {
             setScroll(false)
@@ -51,19 +43,21 @@ const Header = () => {
 
                     <div className="center">BIRDY</div>
                     <div className="right">
-                        <TbSearch />
+                        <TbSearch onClick={() => {
+                            setShowSearch(true)
+                        }} />
                         <AiOutlineHeart />
                         <span className="cart-icon">
-                            <CgShoppingCart onClick={showCartHandler}/>
+                            <CgShoppingCart onClick={() => { setShowCart(true) }} />
                             <span>5</span>
                         </span>
                     </div>
                 </div>
             </header>
-            {showCart && <Cart  cartHandler={showCartHandler}/>}
+            {showCart && <Cart cartHandler={setShowCart} />}
+            {showSearch && <Search searchHandler={setShowSearch} />}
         </Fragment>
-    )
+    );
 };
 
 export default Header;
- 

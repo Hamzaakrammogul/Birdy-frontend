@@ -2,17 +2,14 @@
 
 .main-header {
     width: 100%;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
+    z-index: 99;
     background-color: white;
     color: black;
     border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-    z-index: 99;
-
     @include md {
         padding: 0 40px 0 40px;
     }
-
-    @include sm {}
 
     .header-content {
         display: flex;
@@ -40,6 +37,9 @@
                 cursor: pointer;
                 font-size: 14px;
                 font-weight: 600;
+                &:hover{
+                    opacity: 0.6;
+                }
             }
         }
 
@@ -70,9 +70,11 @@
             svg {
                 font-size: 20px;
                 cursor: pointer;
-
                 @include md {
                     font-size: 24px;
+                }
+                &:hover{
+                    opacity: 0.6;
                 }
             }
 
@@ -98,8 +100,8 @@
 
     &.sticky-header {
         position: sticky;
-        top: 0px;
-        animation: stickyHeader 0.3s ease forwards;
+        top: 0;
+        animation: stickyHeader 0.2s ease forwards;
     }
 
 }
@@ -108,7 +110,7 @@
 @keyframes stickyHeader {
 
     0% {
-        transform: translateY(-80px);
+        transform: translateY(-60px);
     }
 
     100% {
