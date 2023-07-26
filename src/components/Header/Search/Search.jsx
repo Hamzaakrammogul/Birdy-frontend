@@ -17,7 +17,7 @@ const Search = ({ searchHandler }) => {
             </div>
             <div className="search-result-content">
                 <div className="search-results">
-                    <div className="search-result-item">
+                    <div className="search-result-item"> 
                         <div className="img-container">
                             <img src={prod} alt="" />
                         </div>

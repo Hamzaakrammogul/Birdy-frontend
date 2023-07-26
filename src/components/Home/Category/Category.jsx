@@ -5,24 +5,21 @@ import cat2 from "../../../assets/category/png-clipart-letter-c-icon-letter-c-bl
 import cat3 from "../../../assets/category/png-clipart-letter-c-icon-letter-c-blue-text.png";
 import cat4 from "../../../assets/category/png-clipart-letter-c-icon-letter-c-blue-text.png";
 
-const Category = () => {
+const Category = (props) => {
 
     return (
         <div className="shop-by-category">
             <div className="categories">
+                {props.categories.data.map((item, index) => (
 
-                <div className="category">
-                    <img src={cat1} alt="" />
-                </div>
-                <div className="category">
-                    <img src={cat2} alt="" />
-                </div>
-                <div className="category">
-                    <img src={cat3} alt="" />
-                </div>
-                <div className="category">
-                    <img src={cat4} alt="" />
-                </div>
+                    <div key={item.id} className="category">
+                        <img src={process.env.REACT_APP_DEV_URL + item.attributes.img.data.attributes.url} alt="" />
+
+                    </div>
+
+                ))}
+
+
             </div>
         </div>
     )

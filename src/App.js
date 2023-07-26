@@ -10,6 +10,7 @@ import AppContext from './utils/context';
 
 
 function App() {
+    
     return (
         <BrowserRouter>
             <AppContext>
