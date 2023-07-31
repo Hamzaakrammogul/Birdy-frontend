@@ -4,8 +4,8 @@ export const Context = createContext();
 
 const AppContext = (props) => {
 
-    const [categories, setCategories] = useState();
-    const [products, setProducts] = useState();
+    const [categories, setCategories] = useState({data:[]});
+    const [products, setProducts] = useState({data:[]});
 
     return (
         <Context.Provider value={{

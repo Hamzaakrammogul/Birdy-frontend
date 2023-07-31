@@ -6,9 +6,10 @@ const Products = (props) => {
         <div className="products-container">
             {!props.innerPage && <div className="sec-heading">{props.headingText}</div>}
             <div className="products">
-                {props.products.data.map((item, index) => (
+                {props.products.data.map((item) => (
                     <Product
                         key={item.id}
+                        id={item.id}
                         img={<img src={process.env.REACT_APP_DEV_URL + item.attributes.img.data[0].attributes.url} alt="" />}
                         name={item.attributes.title}
                         price={item.attributes.price}

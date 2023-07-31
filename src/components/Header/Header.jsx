@@ -17,6 +17,7 @@ const Header = () => {
     const [scroll, setScroll] = useState(false);
     const [showCart, setShowCart] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const navigate = useNavigate();
 
 
     const handleScroll = () => {
@@ -35,12 +36,12 @@ const Header = () => {
             <header className={`main-header ${scroll ? 'sticky-header' : ''}`}>
                 <div className="header-content">
                     <ul className="left">
-                        <li>Home</li>
+                        <li onClick={()=> navigate('/')}>Home</li>
                         <li>About</li>
                         <li>Categories</li>
                     </ul>
 
-                    <div className="center">BIRDY</div>
+                    <div onClick={()=> navigate('/')} className="center">BIRDY</div>
                     <div className="right">
                         <TbSearch onClick={() => {
                             setShowSearch(true)
