@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
+import { Context } from "../../utils/context";
 import {
     FaFacebookF,
     FaTwitter,
@@ -16,6 +17,7 @@ import useFetch from '../../hooks/useFetch';
 const SingleProduct = () => {
 
     const [counter, setCounter] = useState(1);
+    const ctx = useContext(Context);
 
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
@@ -48,7 +50,10 @@ const SingleProduct = () => {
                                 <span>{counter}</span>
                                 <span onClick={increment}>+</span>
                             </div>
-                            <button className="add-to-cart-btn">
+                            <button className="add-to-cart-btn" onClick={()=>{
+                                ctx.addItemHandler(data.data[0], counter);
+                                setCounter(1);
+                            }}>
                                 <FaCartPlus size={20} />
                                 <p> ADD TO CART</p>
                             </button>

@@ -16,13 +16,13 @@ const Home = () => {
 
     const getCategories = () => {
         fetchDataFromApi("/api/categories?populate=*").then(res => {
-            setCategories(res)
+            setCategories(res);
         })
     }
 
     const getProducts = () => {
         fetchDataFromApi("/api/products?populate=*").then(res => {
-            setProducts(res)
+            setProducts(res);
         })
     }
 
